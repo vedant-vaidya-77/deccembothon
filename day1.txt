@@ -47,14 +47,14 @@ class _SplashScreenState extends State<SplashScreen> {
             image: NetworkImage(
                 // 'https://img.freepik.com/premium-photo/cute-cat-with-christmas_931878-35699.jpg'),
                 'https://e0.pxfuel.com/wallpapers/522/648/desktop-wallpaper-cartoon-christmas-cat-meowy-christmas.jpg'),
-            fit: BoxFit.cover, // adjust the BoxFit property as needed
+            fit: BoxFit.cover,
           ),
         ),
         child: Stack(
           children: [
             Positioned(
-              top: 16, // Adjust this value as needed
-              left: 100, // Adjust this value as needed
+              top: 16,
+              left: 100,
               child: Text(
                 'Merry Catmas :3',
                 style: TextStyle(
@@ -64,8 +64,8 @@ class _SplashScreenState extends State<SplashScreen> {
               ),
             ),
             Positioned(
-              bottom: 16, // Adjust this value as needed
-              left: 113, // Adjust this value as needed
+              bottom: 16,
+              left: 113,
               child: Text(
                 'NIT Agartala',
                 style: TextStyle(
@@ -85,8 +85,8 @@ class _SplashScreenState extends State<SplashScreen> {
               ),
             ),
             Positioned(
-              top: 170, // Adjust this value as needed
-              left: 120, // Adjust this value as needed
+              top: 170,
+              left: 120,
               child: Text(
                 'NewSphere',
                 style: TextStyle(
@@ -122,7 +122,7 @@ class SecondPage extends StatelessWidget {
             'Welcome to NIT Agartala',
             style: TextStyle(
                 fontSize: 28,
-                color: Colors.black), // adjust font size and color
+                color: Colors.black),
           ),
         ),
       ),
