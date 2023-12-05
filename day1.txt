@@ -1,0 +1,132 @@
+import 'dart:async';
+
+import 'package:flutter/material.dart';
+
+void main() {
+  runApp(MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: SplashScreen(),
+    );
+  }
+}
+
+class SplashScreen extends StatefulWidget {
+  @override
+  _SplashScreenState createState() => _SplashScreenState();
+}
+
+class _SplashScreenState extends State<SplashScreen> {
+  @override
+  void initState() {
+    super.initState();
+    Timer(
+      Duration(seconds: 5),
+      () {
+        Navigator.pushReplacement(
+          context,
+          MaterialPageRoute(builder: (context) => SecondPage()),
+        );
+      },
+    );
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('NewSphere'),
+      ),
+      body: Container(
+        decoration: BoxDecoration(
+          image: DecorationImage(
+            image: NetworkImage(
+                // 'https://img.freepik.com/premium-photo/cute-cat-with-christmas_931878-35699.jpg'),
+                'https://e0.pxfuel.com/wallpapers/522/648/desktop-wallpaper-cartoon-christmas-cat-meowy-christmas.jpg'),
+            fit: BoxFit.cover, // adjust the BoxFit property as needed
+          ),
+        ),
+        child: Stack(
+          children: [
+            Positioned(
+              top: 16, // Adjust this value as needed
+              left: 100, // Adjust this value as needed
+              child: Text(
+                'Merry Catmas :3',
+                style: TextStyle(
+                  fontSize: 24,
+                  color: Colors.black,
+                ),
+              ),
+            ),
+            Positioned(
+              bottom: 16, // Adjust this value as needed
+              left: 113, // Adjust this value as needed
+              child: Text(
+                'NIT Agartala',
+                style: TextStyle(
+                  fontSize: 24,
+                  color: Colors.black,
+                ),
+              ),
+            ),
+            Positioned(
+              top: 70,
+              left: 124,
+              child: Image.network(
+                'https://cdn.dribbble.com/users/31864/screenshots/3666062/free_logos_dribbble_ph.jpg', // Replace with your image link
+                width: 120,
+                height: 120,
+                fit: BoxFit.contain,
+              ),
+            ),
+            Positioned(
+              top: 170, // Adjust this value as needed
+              left: 120, // Adjust this value as needed
+              child: Text(
+                'NewSphere',
+                style: TextStyle(
+                  fontSize: 24,
+                  color: Colors.black,
+                ),
+              ),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
+
+class SecondPage extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('Welcome :)'),
+      ),
+      body: Container(
+        decoration: BoxDecoration(
+          image: DecorationImage(
+            image: NetworkImage(
+                'data:image/jpeg;base64,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'),
+            fit: BoxFit.cover, // adjust the BoxFit property as needed
+          ),
+        ),
+        child: Center(
+          child: Text(
+            'Welcome to NIT Agartala',
+            style: TextStyle(
+                fontSize: 28,
+                color: Colors.black), // adjust font size and color
+          ),
+        ),
+      ),
+    );
+  }
+}
+
